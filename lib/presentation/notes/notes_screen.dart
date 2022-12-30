@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:note_re/domain/model/note.dart';
 import 'package:note_re/presentation/add_edit_note/add_edit_note_screen.dart';
+import 'package:note_re/presentation/notes/notes_event.dart';
 import 'package:note_re/presentation/notes/notes_view_model.dart';
-import 'package:note_re/ui/colors.dart';
 import 'package:provider/provider.dart';
 
 import 'components/note_item.dart';
@@ -29,11 +28,14 @@ class NotesScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
+        onPressed: () async {
+          bool? isSaved = await Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => const AddEditNoteScreen()),
           );
+          if (isSaved != null && isSaved) {
+            viewModel.onEvent(const NotesEvent.loadNotes());
+          }
         },
         child: const Icon(Icons.add),
       ),
@@ -44,7 +46,9 @@ class NotesScreen extends StatelessWidget {
               .map(
                 (e) => NoteItem(
                   note: e,
-                  onDeleteTap: null,
+                  onDeleteTap:(){
+                   viewModel.onEvent(NotesEvent.deleteNote(e));
+                  },
                 ),
               )
               .toList(),
