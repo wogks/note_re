@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../domain/model/note.dart';
 
 class NoteItem extends StatelessWidget {
-  const NoteItem({super.key, required this.note});
+  const NoteItem({super.key, required this.note, required this.onDeleteTap});
   final Note note;
+  final Function? onDeleteTap;
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +39,13 @@ class NoteItem extends StatelessWidget {
               ],
             ),
           ),
-          const Positioned(
+          Positioned(
             bottom: 8,
             right: 8,
-            child:  Icon(Icons.delete),
+            child: GestureDetector(
+              onTap: onDeleteTap?.call(),
+              child: const Icon(Icons.delete),
+            ),
           )
         ],
       ),

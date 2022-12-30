@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const roseBud = Colors.accents;
+const roseBud = Colors.purple;
 const primrose = Colors.amber;
 const wisteria = Colors.blueAccent;
 const skyBlue = Colors.deepOrange;
