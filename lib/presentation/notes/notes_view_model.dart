@@ -11,7 +11,9 @@ class NotesViewModel with ChangeNotifier {
   NotesState get state => _state;
 
   Note? _recentDeleted;
-  NotesViewModel(this.repository);
+  NotesViewModel(this.repository) {
+    _loadNotes();
+  }
 
   void onEvent(NotesEvent event) {
     event.when(

@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$NotesEvent<T> {
+mixin _$NotesEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadNotes,
@@ -40,38 +40,38 @@ mixin _$NotesEvent<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(LoadNotes<T> value) loadNotes,
-    required TResult Function(DeleteNote<T> value) deleteNote,
-    required TResult Function(RestoreNote<T> value) restoreNote,
+    required TResult Function(LoadNotes value) loadNotes,
+    required TResult Function(DeleteNote value) deleteNote,
+    required TResult Function(RestoreNote value) restoreNote,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoadNotes<T> value)? loadNotes,
-    TResult? Function(DeleteNote<T> value)? deleteNote,
-    TResult? Function(RestoreNote<T> value)? restoreNote,
+    TResult? Function(LoadNotes value)? loadNotes,
+    TResult? Function(DeleteNote value)? deleteNote,
+    TResult? Function(RestoreNote value)? restoreNote,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoadNotes<T> value)? loadNotes,
-    TResult Function(DeleteNote<T> value)? deleteNote,
-    TResult Function(RestoreNote<T> value)? restoreNote,
+    TResult Function(LoadNotes value)? loadNotes,
+    TResult Function(DeleteNote value)? deleteNote,
+    TResult Function(RestoreNote value)? restoreNote,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $NotesEventCopyWith<T, $Res> {
+abstract class $NotesEventCopyWith<$Res> {
   factory $NotesEventCopyWith(
-          NotesEvent<T> value, $Res Function(NotesEvent<T>) then) =
-      _$NotesEventCopyWithImpl<T, $Res, NotesEvent<T>>;
+          NotesEvent value, $Res Function(NotesEvent) then) =
+      _$NotesEventCopyWithImpl<$Res, NotesEvent>;
 }
 
 /// @nodoc
-class _$NotesEventCopyWithImpl<T, $Res, $Val extends NotesEvent<T>>
-    implements $NotesEventCopyWith<T, $Res> {
+class _$NotesEventCopyWithImpl<$Res, $Val extends NotesEvent>
+    implements $NotesEventCopyWith<$Res> {
   _$NotesEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -81,35 +81,35 @@ class _$NotesEventCopyWithImpl<T, $Res, $Val extends NotesEvent<T>>
 }
 
 /// @nodoc
-abstract class _$$LoadNotesCopyWith<T, $Res> {
+abstract class _$$LoadNotesCopyWith<$Res> {
   factory _$$LoadNotesCopyWith(
-          _$LoadNotes<T> value, $Res Function(_$LoadNotes<T>) then) =
-      __$$LoadNotesCopyWithImpl<T, $Res>;
+          _$LoadNotes value, $Res Function(_$LoadNotes) then) =
+      __$$LoadNotesCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadNotesCopyWithImpl<T, $Res>
-    extends _$NotesEventCopyWithImpl<T, $Res, _$LoadNotes<T>>
-    implements _$$LoadNotesCopyWith<T, $Res> {
+class __$$LoadNotesCopyWithImpl<$Res>
+    extends _$NotesEventCopyWithImpl<$Res, _$LoadNotes>
+    implements _$$LoadNotesCopyWith<$Res> {
   __$$LoadNotesCopyWithImpl(
-      _$LoadNotes<T> _value, $Res Function(_$LoadNotes<T>) _then)
+      _$LoadNotes _value, $Res Function(_$LoadNotes) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoadNotes<T> implements LoadNotes<T> {
+class _$LoadNotes implements LoadNotes {
   const _$LoadNotes();
 
   @override
   String toString() {
-    return 'NotesEvent<$T>.loadNotes()';
+    return 'NotesEvent.loadNotes()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadNotes<T>);
+        (other.runtimeType == runtimeType && other is _$LoadNotes);
   }
 
   @override
@@ -152,9 +152,9 @@ class _$LoadNotes<T> implements LoadNotes<T> {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(LoadNotes<T> value) loadNotes,
-    required TResult Function(DeleteNote<T> value) deleteNote,
-    required TResult Function(RestoreNote<T> value) restoreNote,
+    required TResult Function(LoadNotes value) loadNotes,
+    required TResult Function(DeleteNote value) deleteNote,
+    required TResult Function(RestoreNote value) restoreNote,
   }) {
     return loadNotes(this);
   }
@@ -162,9 +162,9 @@ class _$LoadNotes<T> implements LoadNotes<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoadNotes<T> value)? loadNotes,
-    TResult? Function(DeleteNote<T> value)? deleteNote,
-    TResult? Function(RestoreNote<T> value)? restoreNote,
+    TResult? Function(LoadNotes value)? loadNotes,
+    TResult? Function(DeleteNote value)? deleteNote,
+    TResult? Function(RestoreNote value)? restoreNote,
   }) {
     return loadNotes?.call(this);
   }
@@ -172,9 +172,9 @@ class _$LoadNotes<T> implements LoadNotes<T> {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoadNotes<T> value)? loadNotes,
-    TResult Function(DeleteNote<T> value)? deleteNote,
-    TResult Function(RestoreNote<T> value)? restoreNote,
+    TResult Function(LoadNotes value)? loadNotes,
+    TResult Function(DeleteNote value)? deleteNote,
+    TResult Function(RestoreNote value)? restoreNote,
     required TResult orElse(),
   }) {
     if (loadNotes != null) {
@@ -184,15 +184,15 @@ class _$LoadNotes<T> implements LoadNotes<T> {
   }
 }
 
-abstract class LoadNotes<T> implements NotesEvent<T> {
-  const factory LoadNotes() = _$LoadNotes<T>;
+abstract class LoadNotes implements NotesEvent {
+  const factory LoadNotes() = _$LoadNotes;
 }
 
 /// @nodoc
-abstract class _$$DeleteNoteCopyWith<T, $Res> {
+abstract class _$$DeleteNoteCopyWith<$Res> {
   factory _$$DeleteNoteCopyWith(
-          _$DeleteNote<T> value, $Res Function(_$DeleteNote<T>) then) =
-      __$$DeleteNoteCopyWithImpl<T, $Res>;
+          _$DeleteNote value, $Res Function(_$DeleteNote) then) =
+      __$$DeleteNoteCopyWithImpl<$Res>;
   @useResult
   $Res call({Note note});
 
@@ -200,11 +200,11 @@ abstract class _$$DeleteNoteCopyWith<T, $Res> {
 }
 
 /// @nodoc
-class __$$DeleteNoteCopyWithImpl<T, $Res>
-    extends _$NotesEventCopyWithImpl<T, $Res, _$DeleteNote<T>>
-    implements _$$DeleteNoteCopyWith<T, $Res> {
+class __$$DeleteNoteCopyWithImpl<$Res>
+    extends _$NotesEventCopyWithImpl<$Res, _$DeleteNote>
+    implements _$$DeleteNoteCopyWith<$Res> {
   __$$DeleteNoteCopyWithImpl(
-      _$DeleteNote<T> _value, $Res Function(_$DeleteNote<T>) _then)
+      _$DeleteNote _value, $Res Function(_$DeleteNote) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -212,7 +212,7 @@ class __$$DeleteNoteCopyWithImpl<T, $Res>
   $Res call({
     Object? note = null,
   }) {
-    return _then(_$DeleteNote<T>(
+    return _then(_$DeleteNote(
       null == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
@@ -231,7 +231,7 @@ class __$$DeleteNoteCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$DeleteNote<T> implements DeleteNote<T> {
+class _$DeleteNote implements DeleteNote {
   const _$DeleteNote(this.note);
 
   @override
@@ -239,14 +239,14 @@ class _$DeleteNote<T> implements DeleteNote<T> {
 
   @override
   String toString() {
-    return 'NotesEvent<$T>.deleteNote(note: $note)';
+    return 'NotesEvent.deleteNote(note: $note)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DeleteNote<T> &&
+            other is _$DeleteNote &&
             (identical(other.note, note) || other.note == note));
   }
 
@@ -256,8 +256,8 @@ class _$DeleteNote<T> implements DeleteNote<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeleteNoteCopyWith<T, _$DeleteNote<T>> get copyWith =>
-      __$$DeleteNoteCopyWithImpl<T, _$DeleteNote<T>>(this, _$identity);
+  _$$DeleteNoteCopyWith<_$DeleteNote> get copyWith =>
+      __$$DeleteNoteCopyWithImpl<_$DeleteNote>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -296,9 +296,9 @@ class _$DeleteNote<T> implements DeleteNote<T> {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(LoadNotes<T> value) loadNotes,
-    required TResult Function(DeleteNote<T> value) deleteNote,
-    required TResult Function(RestoreNote<T> value) restoreNote,
+    required TResult Function(LoadNotes value) loadNotes,
+    required TResult Function(DeleteNote value) deleteNote,
+    required TResult Function(RestoreNote value) restoreNote,
   }) {
     return deleteNote(this);
   }
@@ -306,9 +306,9 @@ class _$DeleteNote<T> implements DeleteNote<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoadNotes<T> value)? loadNotes,
-    TResult? Function(DeleteNote<T> value)? deleteNote,
-    TResult? Function(RestoreNote<T> value)? restoreNote,
+    TResult? Function(LoadNotes value)? loadNotes,
+    TResult? Function(DeleteNote value)? deleteNote,
+    TResult? Function(RestoreNote value)? restoreNote,
   }) {
     return deleteNote?.call(this);
   }
@@ -316,9 +316,9 @@ class _$DeleteNote<T> implements DeleteNote<T> {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoadNotes<T> value)? loadNotes,
-    TResult Function(DeleteNote<T> value)? deleteNote,
-    TResult Function(RestoreNote<T> value)? restoreNote,
+    TResult Function(LoadNotes value)? loadNotes,
+    TResult Function(DeleteNote value)? deleteNote,
+    TResult Function(RestoreNote value)? restoreNote,
     required TResult orElse(),
   }) {
     if (deleteNote != null) {
@@ -328,45 +328,45 @@ class _$DeleteNote<T> implements DeleteNote<T> {
   }
 }
 
-abstract class DeleteNote<T> implements NotesEvent<T> {
-  const factory DeleteNote(final Note note) = _$DeleteNote<T>;
+abstract class DeleteNote implements NotesEvent {
+  const factory DeleteNote(final Note note) = _$DeleteNote;
 
   Note get note;
   @JsonKey(ignore: true)
-  _$$DeleteNoteCopyWith<T, _$DeleteNote<T>> get copyWith =>
+  _$$DeleteNoteCopyWith<_$DeleteNote> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RestoreNoteCopyWith<T, $Res> {
+abstract class _$$RestoreNoteCopyWith<$Res> {
   factory _$$RestoreNoteCopyWith(
-          _$RestoreNote<T> value, $Res Function(_$RestoreNote<T>) then) =
-      __$$RestoreNoteCopyWithImpl<T, $Res>;
+          _$RestoreNote value, $Res Function(_$RestoreNote) then) =
+      __$$RestoreNoteCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$RestoreNoteCopyWithImpl<T, $Res>
-    extends _$NotesEventCopyWithImpl<T, $Res, _$RestoreNote<T>>
-    implements _$$RestoreNoteCopyWith<T, $Res> {
+class __$$RestoreNoteCopyWithImpl<$Res>
+    extends _$NotesEventCopyWithImpl<$Res, _$RestoreNote>
+    implements _$$RestoreNoteCopyWith<$Res> {
   __$$RestoreNoteCopyWithImpl(
-      _$RestoreNote<T> _value, $Res Function(_$RestoreNote<T>) _then)
+      _$RestoreNote _value, $Res Function(_$RestoreNote) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$RestoreNote<T> implements RestoreNote<T> {
+class _$RestoreNote implements RestoreNote {
   const _$RestoreNote();
 
   @override
   String toString() {
-    return 'NotesEvent<$T>.restoreNote()';
+    return 'NotesEvent.restoreNote()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$RestoreNote<T>);
+        (other.runtimeType == runtimeType && other is _$RestoreNote);
   }
 
   @override
@@ -409,9 +409,9 @@ class _$RestoreNote<T> implements RestoreNote<T> {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(LoadNotes<T> value) loadNotes,
-    required TResult Function(DeleteNote<T> value) deleteNote,
-    required TResult Function(RestoreNote<T> value) restoreNote,
+    required TResult Function(LoadNotes value) loadNotes,
+    required TResult Function(DeleteNote value) deleteNote,
+    required TResult Function(RestoreNote value) restoreNote,
   }) {
     return restoreNote(this);
   }
@@ -419,9 +419,9 @@ class _$RestoreNote<T> implements RestoreNote<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(LoadNotes<T> value)? loadNotes,
-    TResult? Function(DeleteNote<T> value)? deleteNote,
-    TResult? Function(RestoreNote<T> value)? restoreNote,
+    TResult? Function(LoadNotes value)? loadNotes,
+    TResult? Function(DeleteNote value)? deleteNote,
+    TResult? Function(RestoreNote value)? restoreNote,
   }) {
     return restoreNote?.call(this);
   }
@@ -429,9 +429,9 @@ class _$RestoreNote<T> implements RestoreNote<T> {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(LoadNotes<T> value)? loadNotes,
-    TResult Function(DeleteNote<T> value)? deleteNote,
-    TResult Function(RestoreNote<T> value)? restoreNote,
+    TResult Function(LoadNotes value)? loadNotes,
+    TResult Function(DeleteNote value)? deleteNote,
+    TResult Function(RestoreNote value)? restoreNote,
     required TResult orElse(),
   }) {
     if (restoreNote != null) {
@@ -441,6 +441,6 @@ class _$RestoreNote<T> implements RestoreNote<T> {
   }
 }
 
-abstract class RestoreNote<T> implements NotesEvent<T> {
-  const factory RestoreNote() = _$RestoreNote<T>;
+abstract class RestoreNote implements NotesEvent {
+  const factory RestoreNote() = _$RestoreNote;
 }
