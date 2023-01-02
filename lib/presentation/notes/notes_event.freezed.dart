@@ -21,7 +21,7 @@ mixin _$NotesEvent {
     required TResult Function() loadNotes,
     required TResult Function(Note note) deleteNote,
     required TResult Function() restoreNote,
-    required TResult Function() changeOrder,
+    required TResult Function(NoteOrder order) changeOrder,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,7 +29,7 @@ mixin _$NotesEvent {
     TResult? Function()? loadNotes,
     TResult? Function(Note note)? deleteNote,
     TResult? Function()? restoreNote,
-    TResult? Function()? changeOrder,
+    TResult? Function(NoteOrder order)? changeOrder,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,7 +37,7 @@ mixin _$NotesEvent {
     TResult Function()? loadNotes,
     TResult Function(Note note)? deleteNote,
     TResult Function()? restoreNote,
-    TResult Function()? changeOrder,
+    TResult Function(NoteOrder order)? changeOrder,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,7 +127,7 @@ class _$LoadNotes implements LoadNotes {
     required TResult Function() loadNotes,
     required TResult Function(Note note) deleteNote,
     required TResult Function() restoreNote,
-    required TResult Function() changeOrder,
+    required TResult Function(NoteOrder order) changeOrder,
   }) {
     return loadNotes();
   }
@@ -138,7 +138,7 @@ class _$LoadNotes implements LoadNotes {
     TResult? Function()? loadNotes,
     TResult? Function(Note note)? deleteNote,
     TResult? Function()? restoreNote,
-    TResult? Function()? changeOrder,
+    TResult? Function(NoteOrder order)? changeOrder,
   }) {
     return loadNotes?.call();
   }
@@ -149,7 +149,7 @@ class _$LoadNotes implements LoadNotes {
     TResult Function()? loadNotes,
     TResult Function(Note note)? deleteNote,
     TResult Function()? restoreNote,
-    TResult Function()? changeOrder,
+    TResult Function(NoteOrder order)? changeOrder,
     required TResult orElse(),
   }) {
     if (loadNotes != null) {
@@ -277,7 +277,7 @@ class _$DeleteNote implements DeleteNote {
     required TResult Function() loadNotes,
     required TResult Function(Note note) deleteNote,
     required TResult Function() restoreNote,
-    required TResult Function() changeOrder,
+    required TResult Function(NoteOrder order) changeOrder,
   }) {
     return deleteNote(note);
   }
@@ -288,7 +288,7 @@ class _$DeleteNote implements DeleteNote {
     TResult? Function()? loadNotes,
     TResult? Function(Note note)? deleteNote,
     TResult? Function()? restoreNote,
-    TResult? Function()? changeOrder,
+    TResult? Function(NoteOrder order)? changeOrder,
   }) {
     return deleteNote?.call(note);
   }
@@ -299,7 +299,7 @@ class _$DeleteNote implements DeleteNote {
     TResult Function()? loadNotes,
     TResult Function(Note note)? deleteNote,
     TResult Function()? restoreNote,
-    TResult Function()? changeOrder,
+    TResult Function(NoteOrder order)? changeOrder,
     required TResult orElse(),
   }) {
     if (deleteNote != null) {
@@ -396,7 +396,7 @@ class _$RestoreNote implements RestoreNote {
     required TResult Function() loadNotes,
     required TResult Function(Note note) deleteNote,
     required TResult Function() restoreNote,
-    required TResult Function() changeOrder,
+    required TResult Function(NoteOrder order) changeOrder,
   }) {
     return restoreNote();
   }
@@ -407,7 +407,7 @@ class _$RestoreNote implements RestoreNote {
     TResult? Function()? loadNotes,
     TResult? Function(Note note)? deleteNote,
     TResult? Function()? restoreNote,
-    TResult? Function()? changeOrder,
+    TResult? Function(NoteOrder order)? changeOrder,
   }) {
     return restoreNote?.call();
   }
@@ -418,7 +418,7 @@ class _$RestoreNote implements RestoreNote {
     TResult Function()? loadNotes,
     TResult Function(Note note)? deleteNote,
     TResult Function()? restoreNote,
-    TResult Function()? changeOrder,
+    TResult Function(NoteOrder order)? changeOrder,
     required TResult orElse(),
   }) {
     if (restoreNote != null) {
@@ -474,6 +474,10 @@ abstract class _$$ChangeOrderCopyWith<$Res> {
   factory _$$ChangeOrderCopyWith(
           _$ChangeOrder value, $Res Function(_$ChangeOrder) then) =
       __$$ChangeOrderCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NoteOrder order});
+
+  $NoteOrderCopyWith<$Res> get order;
 }
 
 /// @nodoc
@@ -483,26 +487,58 @@ class __$$ChangeOrderCopyWithImpl<$Res>
   __$$ChangeOrderCopyWithImpl(
       _$ChangeOrder _value, $Res Function(_$ChangeOrder) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? order = null,
+  }) {
+    return _then(_$ChangeOrder(
+      null == order
+          ? _value.order
+          : order // ignore: cast_nullable_to_non_nullable
+              as NoteOrder,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NoteOrderCopyWith<$Res> get order {
+    return $NoteOrderCopyWith<$Res>(_value.order, (value) {
+      return _then(_value.copyWith(order: value));
+    });
+  }
 }
 
 /// @nodoc
 
 class _$ChangeOrder implements ChangeOrder {
-  const _$ChangeOrder();
+  const _$ChangeOrder(this.order);
+
+  @override
+  final NoteOrder order;
 
   @override
   String toString() {
-    return 'NotesEvent.changeOrder()';
+    return 'NotesEvent.changeOrder(order: $order)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ChangeOrder);
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeOrder &&
+            (identical(other.order, order) || other.order == order));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, order);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeOrderCopyWith<_$ChangeOrder> get copyWith =>
+      __$$ChangeOrderCopyWithImpl<_$ChangeOrder>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -510,9 +546,9 @@ class _$ChangeOrder implements ChangeOrder {
     required TResult Function() loadNotes,
     required TResult Function(Note note) deleteNote,
     required TResult Function() restoreNote,
-    required TResult Function() changeOrder,
+    required TResult Function(NoteOrder order) changeOrder,
   }) {
-    return changeOrder();
+    return changeOrder(order);
   }
 
   @override
@@ -521,9 +557,9 @@ class _$ChangeOrder implements ChangeOrder {
     TResult? Function()? loadNotes,
     TResult? Function(Note note)? deleteNote,
     TResult? Function()? restoreNote,
-    TResult? Function()? changeOrder,
+    TResult? Function(NoteOrder order)? changeOrder,
   }) {
-    return changeOrder?.call();
+    return changeOrder?.call(order);
   }
 
   @override
@@ -532,11 +568,11 @@ class _$ChangeOrder implements ChangeOrder {
     TResult Function()? loadNotes,
     TResult Function(Note note)? deleteNote,
     TResult Function()? restoreNote,
-    TResult Function()? changeOrder,
+    TResult Function(NoteOrder order)? changeOrder,
     required TResult orElse(),
   }) {
     if (changeOrder != null) {
-      return changeOrder();
+      return changeOrder(order);
     }
     return orElse();
   }
@@ -580,5 +616,10 @@ class _$ChangeOrder implements ChangeOrder {
 }
 
 abstract class ChangeOrder implements NotesEvent {
-  const factory ChangeOrder() = _$ChangeOrder;
+  const factory ChangeOrder(final NoteOrder order) = _$ChangeOrder;
+
+  NoteOrder get order;
+  @JsonKey(ignore: true)
+  _$$ChangeOrderCopyWith<_$ChangeOrder> get copyWith =>
+      throw _privateConstructorUsedError;
 }
